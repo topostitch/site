@@ -1,9 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
-import { fromSmithsonian } from "../../../../core/src/ingest/from-smithsonian";
-import { ObjectViewer } from "../../../../react/src/components/ObjectViewer";
-import { ModelViewerRenderer } from "../../../../react/src/renderers/model-viewer/ModelViewerRenderer";
+import { fromSmithsonian } from "@topostitch/core";
+import { ObjectViewer, ModelViewerRenderer } from "@topostitch/react";
 
 function getArmstrongObject() {
   const metadataPath = path.join(

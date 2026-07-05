@@ -1,9 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
-import { fromSmithsonian } from "../../../../core/src/ingest/from-smithsonian";
-import { ObjectViewer } from "../../../../react/src/components/ObjectViewer";
-import { ReactThreeFiberRenderer } from "../../../../react/src/renderers/react-three-fiber/ReactThreeFiberRenderer";
+import { fromSmithsonian } from "@topostitch/core";
+
+import { ObjectViewer, ReactThreeFiberRenderer } from "@topostitch/react";
 
 function getArmstrongObject() {
   const metadataPath = path.join(
