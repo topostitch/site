@@ -37,8 +37,8 @@ export function generateMetadata(): Metadata {
 
 export default function ReactThreeFiberExamplePage() {
   const object = getArmstrongObject();
-
-  const location = object.metadata.location as
+  const metadata = object.metadata ?? {};
+  const location = object.metadata?.location as
     | {
         label?: string;
         address?: string;
@@ -97,7 +97,7 @@ export default function ReactThreeFiberExamplePage() {
           <h2 className="text-xl font-semibold">Normalized Metadata</h2>
 
           <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {Object.entries(object.metadata).map(([key, value]) => (
+            {Object.entries(metadata).map(([key, value]) => (
               <div key={key}>
                 <dt className="text-xs uppercase tracking-wide text-zinc-500">
                   {key}
@@ -150,7 +150,7 @@ export default function ReactThreeFiberExamplePage() {
             </summary>
 
             <pre className="mt-4 overflow-x-auto rounded-lg bg-black p-4 text-xs text-zinc-300">
-              {JSON.stringify(object.providers[0], null, 2)}
+              {JSON.stringify(object.providers?.[0] ?? null, null, 2)}
             </pre>
           </details>
         </section>
