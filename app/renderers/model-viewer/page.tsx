@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import { fromSmithsonian } from "@topostitch/core";
-import { Viewer } from "./Viewer";
+import { RendererSwitcher } from "../RendererSwitcher";
 
 function getArmstrongObject() {
   const metadataPath = path.join(
@@ -63,17 +63,19 @@ export default function ModelViewerExamplePage() {
           ← Back to TopoStitch
         </a>
         <div className="mt-4 flex gap-4 text-sm">
-          <a
-            href="/renderers/model-viewer"
-            className="text-zinc-500 hover:text-white"
-          >
+          <a href="/renderers/model-viewer" className="text-white">
             Model Viewer
           </a>
+
           <a
             href="/renderers/react-three-fiber"
             className="text-zinc-500 hover:text-white"
           >
             React Three Fiber
+          </a>
+
+          <a href="/renderers/three" className="text-zinc-500 hover:text-white">
+            Three.js
           </a>
         </div>
 
@@ -82,7 +84,7 @@ export default function ModelViewerExamplePage() {
         <p className="mt-4 max-w-2xl text-zinc-400">{object.description}</p>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-800">
-          <Viewer object={object} />
+          <RendererSwitcher object={object} />
         </div>
 
         <section className="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
@@ -144,6 +146,32 @@ export default function ModelViewerExamplePage() {
               {JSON.stringify(object.providers?.[0] ?? null, null, 2)}
             </pre>
           </details>
+        </section>
+
+        <section className="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
+          <h2 className="text-xl font-semibold">Renderer</h2>
+
+          <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <dt className="text-zinc-500">Technology</dt>
+              <dd>&lt;model-viewer&gt;</dd>
+            </div>
+
+            <div>
+              <dt className="text-zinc-500">Rendering</dt>
+              <dd>Web Component</dd>
+            </div>
+
+            <div>
+              <dt className="text-zinc-500">Best For</dt>
+              <dd>Product viewers, museums, and AR experiences</dd>
+            </div>
+
+            <div>
+              <dt className="text-zinc-500">Features</dt>
+              <dd>AR, hotspots, poster images, environment lighting</dd>
+            </div>
+          </dl>
         </section>
       </div>
     </main>

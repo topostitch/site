@@ -21,6 +21,7 @@ function getArmstrongObject() {
         src: "/models/armstrong/model.glb",
         poster: "/models/armstrong/poster.webp",
         label: "3D Model",
+        ar: true,
       },
     ],
   });
@@ -30,12 +31,12 @@ export function generateMetadata(): Metadata {
   const object = getArmstrongObject();
 
   return {
-    title: `${object.title} — React Three Fiber`,
+    title: `${object.title} · Three.js`,
     description: object.description,
   };
 }
 
-export default function ReactThreeFiberExamplePage() {
+export default function ThreeRendererExamplePage() {
   const object = getArmstrongObject();
   const metadata = object.metadata ?? {};
   const location = object.metadata?.location as
@@ -70,11 +71,14 @@ export default function ReactThreeFiberExamplePage() {
             Model Viewer
           </a>
 
-          <a href="/renderers/react-three-fiber" className="text-white">
+          <a
+            href="/renderers/react-three-fiber"
+            className="text-zinc-500 hover:text-white"
+          >
             React Three Fiber
           </a>
 
-          <a href="/renderers/three" className="text-zinc-500 hover:text-white">
+          <a href="/renderers/three" className="text-white">
             Three.js
           </a>
         </div>
@@ -86,6 +90,7 @@ export default function ReactThreeFiberExamplePage() {
         <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-800">
           <RendererSwitcher object={object} />
         </div>
+
         <section className="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
           <h2 className="text-xl font-semibold">Normalized Metadata</h2>
 
@@ -95,12 +100,13 @@ export default function ReactThreeFiberExamplePage() {
                 <dt className="text-xs uppercase tracking-wide text-zinc-500">
                   {key}
                 </dt>
-                <dd className="mt-1 text-zinc-200 break-words">
+
+                <dd className="mt-1 break-words text-zinc-200">
                   {typeof value === "object" && value !== null ? (
                     <div className="space-y-1">
                       {Object.entries(value).map(([nestedKey, nestedValue]) => (
                         <div key={nestedKey}>
-                          <span className="text-zinc-500">{nestedKey}: </span>
+                          <span className="text-zinc-500">{nestedKey}:</span>{" "}
                           <span>{String(nestedValue ?? "—")}</span>
                         </div>
                       ))}
@@ -118,9 +124,11 @@ export default function ReactThreeFiberExamplePage() {
           <section className="mt-6 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
             <div className="p-6">
               <h2 className="text-xl font-semibold">World Location</h2>
+
               <p className="mt-2 text-zinc-400">
                 {location.label ?? location.address ?? "Location available"}
               </p>
+
               {location.address ? (
                 <p className="mt-1 text-sm text-zinc-500">{location.address}</p>
               ) : null}
@@ -154,22 +162,22 @@ export default function ReactThreeFiberExamplePage() {
           <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
             <div>
               <dt className="text-zinc-500">Technology</dt>
-              <dd>React Three Fiber</dd>
+              <dd>Model Viewer</dd>
             </div>
 
             <div>
               <dt className="text-zinc-500">Rendering</dt>
-              <dd>Declarative React</dd>
+              <dd>Web Components</dd>
             </div>
 
             <div>
               <dt className="text-zinc-500">Best For</dt>
-              <dd>Interactive 3D applications</dd>
+              <dd>Simple model viewing & AR</dd>
             </div>
 
             <div>
               <dt className="text-zinc-500">Features</dt>
-              <dd>React ecosystem, Drei, custom scenes</dd>
+              <dd>AR, hotspots, poster image</dd>
             </div>
           </dl>
         </section>

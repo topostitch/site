@@ -108,6 +108,21 @@ export default function Home() {
                   Open demo →
                 </div>
               </a>
+
+              <a
+                href="/renderers/three"
+                className="block rounded-xl border border-zinc-800 p-6 transition hover:border-zinc-600 hover:bg-zinc-900"
+              >
+                <h3 className="text-xl font-semibold">Three.js</h3>
+
+                <p className="mt-2 text-zinc-400">
+                  Vanilla Three.js renderer without React Three Fiber.
+                </p>
+
+                <div className="mt-6 text-sm font-medium text-blue-400">
+                  Open demo →
+                </div>
+              </a>
             </div>
           </section>
         </div>
