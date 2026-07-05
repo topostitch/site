@@ -1,17 +1,16 @@
 "use client";
 
-import { ObjectViewer } from "@topostitch/react";
-import { ModelViewerRenderer } from "@topostitch/react/model-viewer";
+import { ObjectViewer, ReactThreeFiberRenderer } from "@topostitch/react";
 import type { TopoObject } from "@topostitch/core";
 
 export function Viewer({ object }: { object: TopoObject }) {
   return (
     <ObjectViewer
       object={object}
-      renderer={ModelViewerRenderer}
+      renderer={ReactThreeFiberRenderer}
       options={{
-        autoRotate: true,
-        cameraControls: true,
+        controls: true,
+        cameraPosition: [0, 1.5, 4],
         height: "600px",
         backgroundColor: "#111",
       }}

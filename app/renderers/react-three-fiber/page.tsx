@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import { fromSmithsonian } from "@topostitch/core";
-import { ObjectViewer, ReactThreeFiberRenderer } from "@topostitch/react";
+import { Viewer } from "./Viewer";
 
 function getArmstrongObject() {
   const metadataPath = path.join(
@@ -82,16 +82,7 @@ export default function ReactThreeFiberExamplePage() {
         <p className="mt-4 max-w-2xl text-zinc-400">{object.description}</p>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-800">
-          <ObjectViewer
-            object={object}
-            renderer={ReactThreeFiberRenderer}
-            options={{
-              controls: true,
-              cameraPosition: [0, 1.5, 4],
-              height: "600px",
-              backgroundColor: "#111",
-            }}
-          />
+          <Viewer object={object} />
         </div>
         <section className="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
           <h2 className="text-xl font-semibold">Normalized Metadata</h2>

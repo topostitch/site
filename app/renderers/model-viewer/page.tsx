@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import { fromSmithsonian } from "@topostitch/core";
-import { ObjectViewer, ModelViewerRenderer } from "@topostitch/react";
+import { Viewer } from "./Viewer";
 
 function getArmstrongObject() {
   const metadataPath = path.join(
@@ -82,7 +82,7 @@ export default function ModelViewerExamplePage() {
         <p className="mt-4 max-w-2xl text-zinc-400">{object.description}</p>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-800">
-          <ObjectViewer object={object} renderer={ModelViewerRenderer} />
+          <Viewer object={object} />
         </div>
 
         <section className="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
