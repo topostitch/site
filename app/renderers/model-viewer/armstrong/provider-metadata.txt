@@ -1,0 +1,52 @@
+Smithsonian Institution
+______________________
+3D scene content information:
+
+	Object Name: Pressure Suit, A7-L, Armstrong, Apollo 11, Flown
+	Record maintained by: National Air and Space Museum
+	Record ID: nasm_A19730040000
+
+
+	Object Name: Glove, Left, A7-L, Extravehicular, Apollo 11, Armstrong, Flown
+	Record maintained by: National Air and Space Museum
+	Record ID: nasm_A19730040002
+
+
+	Object Name: Glove, Right, A7-L, Extravehicular, Apollo 11, Armstrong, Flown
+	Record maintained by: National Air and Space Museum
+	Record ID: nasm_A19730040003
+
+
+	Object Name: Visor, Extravehicular, Apollo, A7-L, Apollo 11, Armstrong, Flown
+	Record maintained by: National Air and Space Museum
+	Record ID: nasm_A19730040001
+
+3D Scene ID:3d_package:d8c63ba6-4ebc-11ea-b77f-2e728ce88125
+______________________
+File Usage:
+
+Usage conditions apply
+There are restrictions for re-using this 3D model. For more information and to review the 3D disclaimer, visit the Smithsonian’s Terms of Use page. (https://www.si.edu/Termsofuse)
+
+Restrictions: These files consist of 3D scans of historical objects in the collections of the Smithsonian and may be downloaded by you only for non-commercial, educational, and personal use.
+
+
+______________________
+3D scene content details:
+
+Title: Pressure Suit, A7-L, Armstrong, Apollo 11, Flown
+Smithsonian Record ID: edanmdm:nasm_A19730040000
+
+______________________
+Title: Glove, Left, A7-L, Extravehicular, Apollo 11, Armstrong, Flown
+Smithsonian Record ID: edanmdm:nasm_A19730040002
+
+______________________
+Title: Glove, Right, A7-L, Extravehicular, Apollo 11, Armstrong, Flown
+Smithsonian Record ID: edanmdm:nasm_A19730040003
+
+______________________
+Title: Visor, Extravehicular, Apollo, A7-L, Apollo 11, Armstrong, Flown
+Smithsonian Record ID: edanmdm:nasm_A19730040001
+
+______________________

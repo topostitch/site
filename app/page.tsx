@@ -75,6 +75,41 @@ export default function Home() {
               description="Source for this website."
             />
           </div>
+          <section className="mt-16">
+            <h2 className="mb-6 text-2xl font-semibold">Renderers</h2>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <a
+                href="/renderers/model-viewer"
+                className="block rounded-xl border border-zinc-800 p-6 transition hover:border-zinc-600 hover:bg-zinc-900"
+              >
+                <h3 className="text-xl font-semibold">Model Viewer</h3>
+
+                <p className="mt-2 text-zinc-400">
+                  Web Component renderer powered by Google Model Viewer.
+                </p>
+
+                <div className="mt-6 text-sm font-medium text-blue-400">
+                  Open demo →
+                </div>
+              </a>
+
+              <a
+                href="/renderers/react-three-fiber"
+                className="block rounded-xl border border-zinc-800 p-6 transition hover:border-zinc-600 hover:bg-zinc-900"
+              >
+                <h3 className="text-xl font-semibold">React Three Fiber</h3>
+
+                <p className="mt-2 text-zinc-400">
+                  React Three Fiber renderer with full Three.js customization.
+                </p>
+
+                <div className="mt-6 text-sm font-medium text-blue-400">
+                  Open demo →
+                </div>
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </main>
